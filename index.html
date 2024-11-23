@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icono.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="logo">Shine y Glam</div>
+        <ul class="nav-links">
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#reviews">Reseñas</a></li>
+            <li><a href="#socials">Redes Sociales</a></li>
+            <li><a href="#" onclick="showLogin()">Iniciar Sesión</a></li>
+            <li><a href="#" onclick="showRegister()">Registrarse</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner principal -->
+    <section class="banner">
+        <h1>Bienvenidos a Mi Empresa</h1>
+        <p>Explora nuestros productos y servicios</p>
+        
+    </section>
+
+    <!-- Contenido adicional, inicialmente oculto -->
+   
+
+    <!-- Sección de 'Nosotros' -->
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa dedicada a redefinir el estilo y la elegancia, ofreciendo prendas de alta calidad que fusionan moda, glamour y confort, para que cada persona exprese su autenticidad con confianza y distinción.</p>
+    </section>
+    <section id="about" class="about">
+        <h2>Nuestros Productos</h2>
+    </section>
+    <!-- Sección de Servicios o Productos -->
+    <section id="services" class="services">
+        <div class="service-item">
+            <img src="img/Imagen Buso Blanco .jpg" alt="Nuestros Productos">
+            <p>• 𝙱𝚞𝚜𝚘 𝚍𝚎 𝚌𝚘𝚙𝚊𝚜 50.000 𝚢 𝙿𝚊𝚗𝚝𝚊𝚕𝚘𝚗 𝚌𝚊𝚛𝚐𝚘 80.000 </p>
+        </div>
+        <div class="service-item">
+            <img src="img/Imagen Enterizo.jpg" alt="Talleres y Capacitación">
+            <p>• 𝚅𝚎𝚜𝚝𝚒𝚍𝚘 𝚍𝚒𝚜𝚙𝚘𝚗𝚒𝚋𝚕𝚎, 𝚅𝚊𝚛𝚒𝚎𝚍𝚊𝚍 𝚍𝚎 𝚌𝚘𝚕𝚘𝚛𝚎𝚜</p>
+        </div>
+        <div class="service-item">
+            <img src="img/Imagen Vestido Amarillo.jpg" alt="Diseño y Desarrollo Web">
+            <p>• 𝚅𝚎𝚜𝚝𝚒𝚍𝚘 t𝚒𝚙𝚘 𝚙𝚘𝚕𝚘 𝚢 𝙱𝚘𝚕𝚜𝚘 𝚟𝚊𝚛𝚒𝚎𝚍𝚊𝚍 𝚍𝚎 𝚌𝚘𝚕𝚘𝚛𝚎𝚜</p>
+        </div>
+        <div class="service-item">
+            <img src="img/Imagen Vestido negro.jpg" alt="Manejo de Redes Sociales">
+            <p>• 𝚄𝚗 𝚟𝚎𝚜𝚝𝚒𝚍𝚘 𝚑𝚎𝚛𝚖𝚘𝚜𝚘 𝚢 𝚜ú𝚙𝚎𝚛 𝚟𝚎𝚛𝚜𝚊𝚝𝚒𝚕</p>
+        </div>
+        <div class="service-item">
+            <img src="img/imagen vestido verde.jpg" alt="Manejo de Redes Sociales">
+            <p>• Enterizo unico color</p>
+        </div>
+        <div class="service-item">
+            <img src="img/imagen en bola.jpg" alt="Manejo de Redes Sociales">
+            <p>• Vestido de baño unico color</p>
+        </div>
+    </section>
+
+    <!-- Sección de Reseñas de Clientes -->
+    <section id="reviews" class="reviews">
+        <h2>Opiniones de Nuestros Clientes</h2>
+        <div class="review">
+            <p>"Excelente servicio, lo recomiendo!" - Cliente 1</p>
+        </div>
+        <div class="review">
+            <p>"Gran experiencia de compra, repetiré sin dudas." - Cliente 2</p>
+        </div>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section id="socials" class="socials">
+        <h2>Conéctate con Nosotros</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/p/Shine-Glam-61569348419179/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/shineglam2024/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/tu-pagina" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Formulario de Registro -->
+    <div id="registerForm" class="modal" style="display: none;">
+        <h2>Registrarse</h2>
+        <form onsubmit="register(event)">
+            <label for="registerEmail">Correo Electrónico:</label>
+            <input type="email" id="registerEmail" required>
+            <label for="registerPassword">Contraseña:</label>
+            <input type="password" id="registerPassword" required>
+            <button type="submit">Registrarse</button>
+            <button type="button" onclick="closeModal()">Cerrar</button>
+        </form>
+    </div>
+
+    <!-- Formulario de Inicio de Sesión -->
+    <div id="loginForm" class="modal" style="display: none;">
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="login(event)">
+            <label for="loginEmail">Correo Electrónico:</label>
+            <input type="email" id="loginEmail" required>
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Iniciar Sesión</button>
+            <button type="button" onclick="closeModal()">Cerrar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Gracias por visitarnos.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Función para mostrar el formulario de inicio de sesión
+        function showLogin() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none'; // Ocultar el formulario de registro si está visible
+        }
+
+        // Función para mostrar el formulario de registro
+        function showRegister() {
+            document.getElementById('registerForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none'; // Ocultar el formulario de inicio de sesión si está visible
+        }
+
+        // Función para cerrar los formularios
+        function closeModal() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+
+        // Función para el registro de usuario (simulación básica)
+        function register(event) {
+            event.preventDefault();
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            // Guardar los datos en el localStorage (simulación)
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password);
+
+            alert('Registro exitoso');
+            closeModal();
+        }
+
+        // Función para el inicio de sesión
+        function login(event) {
+            event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+            
+            // Obtener valores de los campos de inicio de sesión
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Recuperar datos guardados en localStorage
+            const storedEmail = localStorage.getItem('userEmail');
+            const storedPassword = localStorage.getItem('userPassword');
+
+            // Validar si los datos ingresados coinciden con los guardados
+            if (email === storedEmail && password === storedPassword) {
+                alert('Inicio de sesión exitoso');
+                closeModal();
+            } else {
+                alert('Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+            }
+        }
+    </script>
+
+</body>
+</html>
